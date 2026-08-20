@@ -14,5 +14,15 @@ const user = {
 
 let logar = document.querySelector('#id01 form')
 
-logar.addEventListener('submit', function(ev
+logar.addEventListener('submit', function(event){
+    let usu = loginForm.uname.value.trim()
+    let sen = loginForm.psw.value
+
+    if (userValidos.hasOwnProperty(usuario)&&user[usu]===sen){
+        alert("deu pai")
+        modal.style.display="none";
+        loginForm.reset();
+    } else {
+        alert("deu erro")
+    }
 })
